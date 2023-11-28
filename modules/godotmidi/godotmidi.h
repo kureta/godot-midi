@@ -1,12 +1,12 @@
-/* summator.h */
+/* godotmidi.h */
 
-#ifndef SUMMATOR_H
-#define SUMMATOR_H
+#ifndef GODOTMIDI_H
+#define GODOTMIDI_H
 
 #include "core/object/ref_counted.h"
 
-class Summator : public RefCounted {
-	GDCLASS(Summator, RefCounted);
+class GodotMIDI : public RefCounted {
+	GDCLASS(GodotMIDI, RefCounted);
 
 	int count;
 
@@ -18,7 +18,7 @@ public:
 	void reset();
 	int get_total() const;
 
-	Summator();
+	GodotMIDI();
 };
 
-#endif // SUMMATOR_H
+#endif // GODOTMIDI_H
