@@ -4,11 +4,17 @@
 #define GODOTMIDI_H
 
 #include "core/object/ref_counted.h"
+#include <rtmidi/RtMidi.h>
 
 class GodotMIDI : public RefCounted {
 	GDCLASS(GodotMIDI, RefCounted);
 
 	int count;
+
+private:
+	bool chooseMidiPort( RtMidiOut *rtmidi );
+	RtMidi::Api chooseMidiApi();
+	RtMidiOut *midiout = 0;
 
 protected:
 	static void _bind_methods();
